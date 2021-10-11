@@ -1,5 +1,7 @@
-function dropdownFunction() {
-    document.getElementById("MyDropdown").classList.toggle("show");
+function dropdownFunction(a) {
+    a.parentNode.getElementsByClassName('dropdown-content')[0].classList.toggle("show");
+    a.parentNode.getElementsByClassName('dropbtn')[0].classList.toggle("active");
+    a.parentNode.getElementsByClassName('arrow')[0].classList.toggle("flip");
 }
 
 window.onclick = function(event) {

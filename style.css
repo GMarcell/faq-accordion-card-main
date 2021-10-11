@@ -6,8 +6,12 @@
     margin: 0;
 }
 
+html {
+    font-size: 12px;
+}
+
 main {
-    background-color: hsl(273, 75%, 66%);
+    background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
     min-height: 100vh;
     width: 100%;
     display: flex;
@@ -16,34 +20,102 @@ main {
 }
 
 .container {
-    background-color: aliceblue;
-    max-width: 300px;
+    background-color: hsl(0, 0%, 100%);
+    background-image: url("images/bg-pattern-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    width: 300px;
     align-items: center;
     border-radius: 15px;
     text-align: center;
     margin: auto;
+    padding-bottom: 50px;
+    display: grid;
 }
 
-#image {
-    margin-top: -100px;
-    margin-left: 0px;
-    border: 5px solid red;
+h1 {
+    margin: 20px;
+}
+
+.image-wrapper-inner {
+    background-image: url("images/illustration-woman-online-mobile.svg");
+    background-repeat: no-repeat;
+    height: 200px;
+    margin-top: -105px;
+}
+
+.box {
+    display: none;
 }
 
 .dropdown-content {
     display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    margin: 10px auto 10px;
+}
+
+.arrow {
+    float: right;
+    margin-top: 5px;
+}
+
+.flip {
+    transform: rotate(180deg);
 }
 
 .show {
     display: block;
+    color: hsl(240, 6%, 50%);
+    text-align: left;
+}
+
+.active {
+    color: hsl(237, 12%, 33%);
+    font-weight: 700;
+}
+
+.dropbtn {
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
 }
 
 .dropdown {
     position: relative;
     display: inline-block;
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+    margin: auto 20px auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width: 780px) {
+    .container {
+        width: 700px;
+        background-image: url("images/bg-pattern-desktop.svg");
+        background-image: url("images/bg-pattern-mobile.svg");
+        display: grid;
+        grid-template-columns: 50% 50%;
+        padding: 0;
+    }
+    .image-wrapper-inner {
+        width: 500px;
+        height: 500px;
+        background-image: url("images/illustration-woman-online-desktop.svg");
+        background-position: left center;
+        transform: scale(0.8);
+        margin-left: -100px;
+    }
+    .dropbtn:hover {
+        color: hsl(14, 88%, 65%);
+    }
 }
