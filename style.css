@@ -101,21 +101,32 @@ h1 {
 @media only screen and (min-width: 780px) {
     .container {
         width: 700px;
-        background-image: url("images/bg-pattern-desktop.svg");
-        background-image: url("images/bg-pattern-mobile.svg");
+        background-image: url("images/bg-pattern-desktop.svg"), url("images/illustration-woman-online-desktop.svg");
+        background-size: cover, 50%;
+        background-position: -400px -200px, -50px 50px;
         display: grid;
         grid-template-columns: 50% 50%;
         padding: 0;
+        /* overflow: hidden; */
     }
     .image-wrapper-inner {
         width: 500px;
         height: 500px;
-        background-image: url("images/illustration-woman-online-desktop.svg");
-        background-position: left center;
+        background-image: none;
+        background-position: -20px 130px;
         transform: scale(0.8);
         margin-left: -100px;
     }
+    .box {
+        display: block;
+        position: absolute;
+        top: 250px;
+        left: -30px;
+    }
     .dropbtn:hover {
         color: hsl(14, 88%, 65%);
+    }
+    .right {
+        text-align: left;
     }
 }
