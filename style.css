@@ -107,7 +107,6 @@ h1 {
         background-position: -250px -300px, -70px 50px;
         display: grid;
         grid-template-columns: 50% 50%;
-        /* overflow: hidden; */
     }
     .image-wrapper-inner {
         width: 500px;
