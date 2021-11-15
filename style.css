@@ -60,12 +60,6 @@ h1 {
     margin-top: 5px;
 }
 
-.show {
-    display: block;
-    color: hsl(240, 6%, 50%);
-    text-align: left;
-}
-
 .active {
     color: hsl(237, 12%, 33%);
     font-weight: 700;
